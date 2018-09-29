@@ -16,7 +16,7 @@ There are three types of interrupts: exceptions (*processor-generated interrupts
 
 **Interrupt handlers.** On x86, you use the IDT data structure, discussed in Chapter 6 ("Interrupt and Exception Handling) of the [Intel SDM], on the CPU to map all types of interrupts to a software interrupt handler.
 
-**Interrupt controller.** The interrupt controller, discussed in Chapter 10 ("Advanced Programmable Interrupt Controller (APIC)") of the [Intel SDM] and the [Intel xAPIC2] specification, enables the CPU to receive external interrupts.
+**Interrupt controller.** The interrupt controller, discussed in Chapter 10 ("Advanced Programmable Interrupt Controller (APIC)") of the [Intel SDM] and the [Intel x2APIC] specification, enables the CPU to receive external interrupts.
 
 **Interrupt delivery.** For interrupt delivery, you use MSI-X, which is a message-signaled interrupt delivery mechanism.
 MSI-X is discussed in Section 10.11 ("Message Signalled Interrupts") of the [Intel SDM].

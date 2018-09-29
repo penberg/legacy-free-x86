@@ -21,6 +21,10 @@ There are three types of interrupts: exceptions (*processor-generated interrupts
 **Interrupt delivery.** For interrupt delivery, you use MSI-X, which is a message-signaled interrupt delivery mechanism.
 MSI-X is discussed in Section 10.11 ("Message Signalled Interrupts") of the [Intel SDM].
 
+## Virtualization
+
+**I/O paravirtualization.** The default paravirtualized I/O devices on x86 are specified by [VIRTIO 1.0]. Please note that the VIRTIO 1.0 interfaces (referred to as *modern*) are incompatible with the older de facto standard VIRTIO interfaces (referred to as *legacy*).
+
 ## References
 
 * Intel® 64 and IA-32 Architectures Software Developer’s Manual Volume 3 (3A, 3B, 3C & 3D): System Programming Guide ([Intel SDM])
@@ -28,6 +32,7 @@ MSI-X is discussed in Section 10.11 ("Message Signalled Interrupts") of the [Int
 
 [Intel SDM]: https://software.intel.com/en-us/download/intel-64-and-ia-32-architectures-sdm-combined-volumes-3a-3b-3c-and-3d-system-programming-guide
 [Intel x2APIC]: https://www.naic.edu/~phil/software/intel/318148.pdf
+[VIRTIO 1.0]: http://docs.oasis-open.org/virtio/virtio/v1.0/virtio-v1.0.html
 
 ## License
 

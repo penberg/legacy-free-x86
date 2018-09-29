@@ -34,6 +34,7 @@ MSI-X is discussed in Section 10.11 ("Message Signalled Interrupts") of the [Int
 * Intel® 64 Architecture x2APIC Specification ([Intel x2APIC])
 * Intel® 64 and IA-32 Architectures Software Developer’s Manual Volume 3 (3A, 3B, 3C & 3D): System Programming Guide ([Intel SDM])
 * Multiboot2 Specification version 2.0 ([Multiboot2])
+* Virtual I/O Device (VIRTIO) Version 1.0 ([VIRTIO 1.0])
 
 [Intel SDM]: https://software.intel.com/en-us/download/intel-64-and-ia-32-architectures-sdm-combined-volumes-3a-3b-3c-and-3d-system-programming-guide
 [Intel x2APIC]: https://www.naic.edu/~phil/software/intel/318148.pdf

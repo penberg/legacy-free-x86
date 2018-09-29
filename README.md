@@ -9,6 +9,10 @@ The purpose of this living document is to show how to program the latest generat
 
 If you find errors or missing details in this document, please send a pull request!
 
+## Bootstrap
+
+**Boot loaders.** The [Multiboot2] specification defines how to lay out an OS image so that bootloaders, such as [GNU GRUB](https://www.gnu.org/software/grub/), can load them. Please note that older versions of the Multiboot specification, discussed in many OS development resources, are _incompatible_ with Multiboot2.
+
 ## Interrupts
 
 Interrupts are a mechanism to preempt the CPU to notify about events such as faults and I/O.
@@ -27,11 +31,13 @@ MSI-X is discussed in Section 10.11 ("Message Signalled Interrupts") of the [Int
 
 ## References
 
-* Intel® 64 and IA-32 Architectures Software Developer’s Manual Volume 3 (3A, 3B, 3C & 3D): System Programming Guide ([Intel SDM])
 * Intel® 64 Architecture x2APIC Specification ([Intel x2APIC])
+* Intel® 64 and IA-32 Architectures Software Developer’s Manual Volume 3 (3A, 3B, 3C & 3D): System Programming Guide ([Intel SDM])
+* Multiboot2 Specification version 2.0 ([Multiboot2])
 
 [Intel SDM]: https://software.intel.com/en-us/download/intel-64-and-ia-32-architectures-sdm-combined-volumes-3a-3b-3c-and-3d-system-programming-guide
 [Intel x2APIC]: https://www.naic.edu/~phil/software/intel/318148.pdf
+[Multiboot2]: https://www.gnu.org/software/grub/manual/multiboot2/multiboot.html
 [VIRTIO 1.0]: http://docs.oasis-open.org/virtio/virtio/v1.0/virtio-v1.0.html
 
 ## License

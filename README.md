@@ -11,7 +11,13 @@ If you find errors or missing details in this document, please send a pull reque
 
 ## Bootstrap
 
-**Boot loaders.** The [Multiboot2] specification defines how to lay out an OS image so that bootloaders, such as [GNU GRUB](https://www.gnu.org/software/grub/), can load them. Please note that older versions of the Multiboot specification, discussed in many OS development resources, are _incompatible_ with Multiboot2.
+**Booting.** The x86 CPU is in legacy 8086 mode after CPU reset for backward compatibility reasons.
+[Intel Minimal Boot Loader] documents the various steps needed to boot on x86 CPU.
+The firmware or a bootloader performs many of the early steps, but the OS also needs to perform some of the later steps, such as interrupt configuration, timer set up, and so on.
+
+**Bootloaders.** OS typically starts execution via a bootloader, which has already performed some bootstrap steps for us.
+The [Multiboot2] specification defines how to lay out an OS image so that bootloaders, such as [GNU GRUB](https://www.gnu.org/software/grub/), can load them.
+Please note that older versions of the Multiboot specification, discussed in many OS development resources, are _incompatible_ with Multiboot2.
 
 ## Interrupts
 
@@ -39,10 +45,12 @@ I/O buses connect the CPU to hardware devices.
 
 * Intel® 64 Architecture x2APIC Specification ([Intel x2APIC])
 * Intel® 64 and IA-32 Architectures Software Developer’s Manual Volume 3 (3A, 3B, 3C & 3D): System Programming Guide ([Intel SDM])
+* Minimal Intel Architecture Boot Loader ([Intel Boot])
 * Multiboot2 Specification version 2.0 ([Multiboot2])
 * PCI Express® Base Specification Revision 3.0 ([PCIe])
 * Virtual I/O Device (VIRTIO) Version 1.0 ([VIRTIO 1.0])
 
+[Intel Minimal Boot Loader]: https://www.intel.co.uk/content/www/uk/en/intelligent-systems/intel-boot-loader-development-kit/minimal-intel-architecture-boot-loader-paper.html
 [Intel SDM]: https://software.intel.com/en-us/download/intel-64-and-ia-32-architectures-sdm-combined-volumes-3a-3b-3c-and-3d-system-programming-guide
 [Intel x2APIC]: https://www.naic.edu/~phil/software/intel/318148.pdf
 [Multiboot2]: https://www.gnu.org/software/grub/manual/multiboot2/multiboot.html

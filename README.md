@@ -31,6 +31,8 @@ There are three types of interrupts: exceptions (*processor-generated interrupts
 **Interrupt delivery.** For interrupt delivery, you use MSI-X, which is a message-signaled interrupt delivery mechanism.
 MSI-X is discussed in Section 10.11 ("Message Signalled Interrupts") of the [Intel SDM].
 
+Interrupt handling on x86 is discussed, in the context of FreeBSD, in [Baldwin07].
+
 ## I/O Buses
 
 I/O buses connect the CPU to hardware devices.
@@ -48,6 +50,7 @@ I/O buses connect the CPU to hardware devices.
 * Minimal Intel Architecture Boot Loader ([Intel Boot])
 * Multiboot2 Specification version 2.0 ([Multiboot2])
 * PCI Express® Base Specification Revision 3.0 ([PCIe])
+* PCI Interrupts for x86 Machines under FreeBSD by John H. Baldwin, BSDCan 2007 ([Baldwin07])
 * Virtual I/O Device (VIRTIO) Version 1.0 ([VIRTIO 1.0])
 
 [Intel Minimal Boot Loader]: https://www.intel.co.uk/content/www/uk/en/intelligent-systems/intel-boot-loader-development-kit/minimal-intel-architecture-boot-loader-paper.html
@@ -56,6 +59,7 @@ I/O buses connect the CPU to hardware devices.
 [Multiboot2]: https://www.gnu.org/software/grub/manual/multiboot2/multiboot.html
 [PCIe]: http://composter.com.ua/documents/PCI_Express_Base_Specification_Revision_3.0.pdf
 [VIRTIO 1.0]: http://docs.oasis-open.org/virtio/virtio/v1.0/virtio-v1.0.html
+[Baldwin07]: https://www.usenix.org/system/files/conference/trios14/trios14-paper-hruby.pdf
 
 ## License
 

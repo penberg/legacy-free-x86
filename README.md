@@ -29,7 +29,7 @@ There are three types of interrupts: exceptions (*processor-generated interrupts
 **Interrupt controller.** The interrupt controller, discussed in Chapter 10 ("Advanced Programmable Interrupt Controller (APIC)") of the [Intel SDM] and the [Intel x2APIC] specification, enables the CPU to receive external interrupts.
 
 **Interrupt delivery.** For interrupt delivery, you use MSI-X, which is a message-signaled interrupt delivery mechanism.
-MSI-X is discussed in Section 10.11 ("Message Signalled Interrupts") of the [Intel SDM].
+The machine architecture independent parts of MSI-X are discussed in Section 6.8 ("Message Signaled Interrupts") of the [PCI] specification and the x86 specific parts in Section 10.11 ("Message Signalled Interrupts") of the [Intel SDM].
 
 Interrupt handling on x86 is discussed, in the context of FreeBSD, in [Baldwin07].
 
@@ -51,12 +51,14 @@ I/O buses connect the CPU to hardware devices.
 * Multiboot2 Specification version 2.0 ([Multiboot2])
 * PCI Express® Base Specification Revision 3.0 ([PCIe])
 * PCI Interrupts for x86 Machines under FreeBSD by John H. Baldwin, BSDCan 2007 ([Baldwin07])
+* PCI Local Bus Specification Revision 3.0 ([PCI])
 * Virtual I/O Device (VIRTIO) Version 1.0 ([VIRTIO 1.0])
 
 [Intel Minimal Boot Loader]: https://www.intel.co.uk/content/www/uk/en/intelligent-systems/intel-boot-loader-development-kit/minimal-intel-architecture-boot-loader-paper.html
 [Intel SDM]: https://software.intel.com/en-us/download/intel-64-and-ia-32-architectures-sdm-combined-volumes-3a-3b-3c-and-3d-system-programming-guide
 [Intel x2APIC]: https://www.naic.edu/~phil/software/intel/318148.pdf
 [Multiboot2]: https://www.gnu.org/software/grub/manual/multiboot2/multiboot.html
+[PCI]: https://www.xilinx.com/Attachment/PCI_SPEV_V3_0.pdf
 [PCIe]: http://composter.com.ua/documents/PCI_Express_Base_Specification_Revision_3.0.pdf
 [VIRTIO 1.0]: http://docs.oasis-open.org/virtio/virtio/v1.0/virtio-v1.0.html
 [Baldwin07]: https://www.usenix.org/system/files/conference/trios14/trios14-paper-hruby.pdf

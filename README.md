@@ -54,6 +54,7 @@ I/O buses connect the CPU to hardware devices.
 * PCI Local Bus Specification Revision 3.0 ([PCI])
 * Virtual I/O Device (VIRTIO) Version 1.0 ([VIRTIO 1.0])
 
+[Baldwin07]: https://people.freebsd.org/~jhb/papers/bsdcan/2007/article.pdf
 [Intel Minimal Boot Loader]: https://www.intel.co.uk/content/www/uk/en/intelligent-systems/intel-boot-loader-development-kit/minimal-intel-architecture-boot-loader-paper.html
 [Intel SDM]: https://software.intel.com/en-us/download/intel-64-and-ia-32-architectures-sdm-combined-volumes-3a-3b-3c-and-3d-system-programming-guide
 [Intel x2APIC]: https://www.naic.edu/~phil/software/intel/318148.pdf
@@ -61,7 +62,6 @@ I/O buses connect the CPU to hardware devices.
 [PCI]: https://www.xilinx.com/Attachment/PCI_SPEV_V3_0.pdf
 [PCIe]: http://composter.com.ua/documents/PCI_Express_Base_Specification_Revision_3.0.pdf
 [VIRTIO 1.0]: http://docs.oasis-open.org/virtio/virtio/v1.0/virtio-v1.0.html
-[Baldwin07]: https://www.usenix.org/system/files/conference/trios14/trios14-paper-hruby.pdf
 
 ## License
 

@@ -21,8 +21,11 @@ Please note that older versions of the Multiboot specification, discussed in man
 
 ## Interrupts
 
+### Overview
+
 Interrupts are a mechanism to preempt the CPU to notify about events such as faults and I/O.
 There are three types of interrupts: exceptions (*processor-generated interrupts*), traps (*software-generated interrupts*), and external interrupts (*hardware-generated interrupts*).
+For a summary of interrupt handling on x86 is discussed, in the context of FreeBSD, see [Baldwin07].
 
 **Interrupt handlers.** On x86, you use the IDT data structure, discussed in Chapter 6 ("Interrupt and Exception Handling) of the [Intel SDM], on the CPU to map all types of interrupts to a software interrupt handler.
 
@@ -31,7 +34,17 @@ There are three types of interrupts: exceptions (*processor-generated interrupts
 **Interrupt delivery.** For interrupt delivery, you use MSI-X, which is a message-signaled interrupt delivery mechanism.
 The machine architecture independent parts of MSI-X are discussed in Section 6.8 ("Message Signaled Interrupts") of the [PCI] specification and the x86 specific parts in Section 10.11 ("Message Signalled Interrupts") of the [Intel SDM].
 
-Interrupt handling on x86 is discussed, in the context of FreeBSD, in [Baldwin07].
+### MSI-X
+
+The OS probes and configures MSI-X support for a PCI function via the PCI configuration space using the MSI-X capability structure.
+The MSI-X PCI capability structure is identified by capability ID `0x11` specified by Section 6.8.2.1 ("Capability ID for MSI-X ") in [PCI].
+The capability structure has a Message Control register and pointers to MSI-X Table and Pending Bit Array (PBA) structures.
+The Message Control register, specified by Section 6.8.2.3 ("Message Control for MSI-X") of [PCI],  has fields for enabling MSI-X support, masking/unmasking all function interrupt vectors and determining the size of MSI-X table.
+The MSI-X Table entries configure per-interrupt vector message address and, data and masking.
+The format of the message address and data fields are specific to a machine architecture.
+For x86, the [Intel SDM] specifies their format as part of x2APIC.
+The masking field enables or disables a specific interrupt vector.
+Finally, the PBA structure provides information on what messages are pending for a given interrupt vector.
 
 ## I/O Buses
 

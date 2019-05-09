@@ -52,6 +52,8 @@ I/O buses connect the CPU to hardware devices.
 
 **PCI Express (PCIe).** The PCI Express bus, discussed in [PCIe], is the main high-speed I/O bus on x86. PCIe is the latest generation of the PCI bus variants.
 
+**Input-output memory management unit (IOMMU).** On Intel platform, IOMMU is part of the [Virtualization Directed I/O] capability.
+
 ## Virtualization
 
 **I/O paravirtualization.** The default paravirtualized I/O devices on x86 are specified by [VIRTIO 1.0]. Please note that the VIRTIO 1.0 interfaces (referred to as *modern*) are incompatible with the older de facto standard VIRTIO interfaces (referred to as *legacy*).
@@ -75,6 +77,7 @@ I/O buses connect the CPU to hardware devices.
 [PCI]: https://www.xilinx.com/Attachment/PCI_SPEV_V3_0.pdf
 [PCIe]: http://composter.com.ua/documents/PCI_Express_Base_Specification_Revision_3.0.pdf
 [VIRTIO 1.0]: http://docs.oasis-open.org/virtio/virtio/v1.0/virtio-v1.0.html
+[Virtualization Directed I/O]: https://software.intel.com/sites/default/files/managed/c5/15/vt-directed-io-spec.pdf
 
 ## License
 

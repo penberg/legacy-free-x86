@@ -19,6 +19,10 @@ The firmware or a bootloader performs many of the early steps, but the OS also n
 The [Multiboot2] specification defines how to lay out an OS image so that bootloaders, such as [GNU GRUB](https://www.gnu.org/software/grub/), can load them.
 Please note that older versions of the Multiboot specification, discussed in many OS development resources, are _incompatible_ with Multiboot2.
 
+## Firmware and configuration
+
+The UEFI specification defines the interface between firmware and the OS. The ACPI specification defines interface for machine configuration discovery.
+
 ## Interrupts
 
 ### Overview
@@ -60,6 +64,7 @@ I/O buses connect the CPU to hardware devices.
 
 ## References
 
+* [ACPI Specification](https://uefi.org/specifications)
 * Intel® 64 Architecture x2APIC Specification ([Intel x2APIC])
 * Intel® 64 and IA-32 Architectures Software Developer’s Manual Volume 3 (3A, 3B, 3C & 3D): System Programming Guide ([Intel SDM])
 * Minimal Intel Architecture Boot Loader ([Intel Boot])
@@ -68,6 +73,7 @@ I/O buses connect the CPU to hardware devices.
 * PCI Interrupts for x86 Machines under FreeBSD by John H. Baldwin, BSDCan 2007 ([Baldwin07])
 * PCI Local Bus Specification Revision 3.0 ([PCI])
 * Virtual I/O Device (VIRTIO) Version 1.0 ([VIRTIO 1.0])
+* [UEFI Specification](https://uefi.org/sites/default/files/resources/UEFI%20Spec%202.8B%20May%202020.pdf)
 
 [Baldwin07]: https://people.freebsd.org/~jhb/papers/bsdcan/2007/article.pdf
 [Intel Minimal Boot Loader]: https://www.intel.co.uk/content/www/uk/en/intelligent-systems/intel-boot-loader-development-kit/minimal-intel-architecture-boot-loader-paper.html
